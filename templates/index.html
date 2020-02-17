@@ -1,7 +1,7 @@
 {% extends 'blog-base.html' %}
-<head>
-  <title>{% block title %}Home | Sensive Blog{% endblock %}</title>
-</head>
+
+{% block title %}Home{% endblock %}
+
 {% block content %}
 <main class="site-main">
   <!--================Hero Banner start =================-->
@@ -56,7 +56,7 @@
                 {% if fresh_post.image_url %}
                   <img class="img-fluid" src="{{fresh_post.image_url}}" alt="">
                 {% else %}
-                  <img class="img-fluid" src="/media/img/banner/blog.png" alt="">
+                  <img class="img-fluid" src="{% static 'blog.png' %}" alt="">
                 {% endif %}
                 <ul class="thumb-info" style="max-width: 550px">
                   <li><a href="#"><i class="ti-user"></i>{{fresh_post.author}}</a></li>
