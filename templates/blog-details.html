@@ -1,4 +1,8 @@
 {% extends 'blog-base.html' %}
+{% load static %}
+<head>
+  <title>{% block title %} {{post.title}} | Sensive Blog{% endblock %}</title>
+</head>
 {% block content %}
   <!--================ Hero sm Banner start =================-->
   <section class="mb-30px">
@@ -30,7 +34,7 @@
                 {% if post.image_url %}
                   <img class="img-fluid" src="{{post.image_url}}" alt="">
                 {% else %}
-                  <img class="img-fluid" src="/media/img/banner/blog.png" alt="">
+                  <img class="img-fluid" src="{% static 'blog.png' %}" alt="">
                 {% endif %}
                 <a href="{% url 'post_detail' slug=post.slug %}"><h4>{{post.title}}</h4></a>
                 <div class="user_details">
