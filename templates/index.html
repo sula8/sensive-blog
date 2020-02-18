@@ -30,7 +30,7 @@
               {% if popular_post.image_url %}
               <img class="img-fluid" src="{{popular_post.image_url}}" alt="">
               {% else %}
-              <img class="img-fluid" src="/media/img/banner/blog.png" alt="">
+              <img class="img-fluid" src="{% static 'blog.png' %}" alt="">
               {% endif %}
             </div>
             <div class="blog__slide__content">
